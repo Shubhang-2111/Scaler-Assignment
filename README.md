@@ -64,7 +64,7 @@ this will start your server.
 ## Screenshots
 
 ### Cab details 
-![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(26).png?raw=true)
+![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(30).png?raw=true)
 
 ### Tracking
 
