@@ -1,4 +1,7 @@
 const {dijkstra} = require('./shortest_time')
+require('dotenv').config();
+
+const password = process.env.PASSWORD;
 
 const express = require('express')
 const app = express()
@@ -7,12 +10,21 @@ app.use(cors())
 app.use(express.json())
 const mysql = require('mysql')
 
+// for local host we can use mysql database  
 //create connection to the database
+// const db = mysql.createConnection({
+//   user: "root",
+//   host: 'localhost',
+//   password: '',
+//   database: 'cab-booking',
+// })
+
+// below is the connection to a online database running on freemysqldatabase
 const db = mysql.createConnection({
-  user: "root",
-  host: 'localhost',
-  password: '',
-  database: 'cab-booking',
+  user: "sql12610464",
+  host: 'sql12.freesqldatabase.com',
+  password: password,
+  database: 'sql12610464',
 })
 
 // show the list of cabs from mysql databse
@@ -68,7 +80,7 @@ app.get("/track-cab",(req,res)=>{
       })
   })
  
-// once the server starts all the values of database will be reset 
+// once the server starts all the values of database will be reset to inital values
 app.listen(3001, () => {
   console.log('Server started on port 3001'),
   db.query(
