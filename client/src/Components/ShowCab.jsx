@@ -60,7 +60,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         ))}
       </tbody>
     </table>
-    <p>SelectCab is : {selected_cab.cab_name}</p>
+    <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{selected_cab.price}</p>
     <button className='btn btn-primary' onClick={bookCab}> Confirm Booking</button>
     </div>
   )

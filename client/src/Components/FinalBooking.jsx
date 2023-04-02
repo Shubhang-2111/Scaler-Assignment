@@ -28,10 +28,11 @@ const FinalBooking = () => {
     setShowCabDetails(true)
   };
 
+  // here user will enter the details of user email , source and destination
   return (
     <div className="container d-flex flex-row" style={{margin:"auto"}}>
       <div className="container">
-      <h2>Enter details</h2>
+      <h2>Enter details of your journey</h2>
       <form onSubmit={handleSubmit}>
       <div className="form-group">
       <label htmlFor="inputField">Email:</label>
