@@ -1,7 +1,7 @@
 
 # Cab-Booking
 
-In this application user can enter email , source location , destination (i.e A,B,C,D,E,F). Based on the below time between every node given in the assignment. The application will show the shortest time that will be taken to reach the destination.
+In this application user can enter email , source location , destination (i.e A,B,C,D,E,F). Based on the below time between every node given in the assignment. The application will show the shortest time that will be taken to reach the destination and the user can book the cab according to it with estimated cost per cab.
 
 
 ![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(29).png?raw=true)
@@ -20,7 +20,7 @@ In this application user can enter email , source location , destination (i.e A,
 4. JavaScript
 
 ## Cab Details
-Based on the source and destination choosen and the shortest time , application will show the list of the cabs available with its name , price per minutes and the estimated cost based on the journey time.
+Based on the source and destination choosen and the shortest time , application will show the list of 5 cabs available with its name , price per minutes and the estimated cost based on the journey time.
 
 ## Selecting-Cab 
 User can tap on select button to choose a cab. Cab which already booked cannot be booked again as the selecting button will be disabled.
