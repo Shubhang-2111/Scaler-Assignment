@@ -25,6 +25,9 @@ Once user will click on show details button then based on the source and destina
 ## Selecting-Cab 
 User can tap on select button to choose a cab. Cab which is already booked cannot be booked again as the selecting button will be disabled.
 
+## Editing-Price
+Also you can edit the price per minute of the selected cab by clicking on edit price button
+
 ## Confirm-Booking
 Once the user will click on confirm booking the cab will be booked by the user with estimated cost.
 
