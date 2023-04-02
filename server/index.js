@@ -1,8 +1,6 @@
 const {dijkstra} = require('./shortest_time')
 require('dotenv').config();
 
-const password = process.env.PASSWORD;
-
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -19,11 +17,13 @@ const mysql = require('mysql')
 //   database: 'cab-booking',
 // })
 
-// below is the connection to a online database running on freemysqldatabase
+// below is the connection to a sample online database running on freemysqldatabase 
+// NOTE if you use below database then booking time may vary  from your machine time
+// Please do not try to change the structure of database !
 const db = mysql.createConnection({
   user: "sql12610464",
   host: 'sql12.freesqldatabase.com',
-  password: password,
+  password: 'iBHgmB3Rz1', 
   database: 'sql12610464',
 })
 

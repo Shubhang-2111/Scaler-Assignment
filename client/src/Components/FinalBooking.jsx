@@ -9,6 +9,7 @@ const FinalBooking = () => {
   const [shortestPath, setShortestPath] = useState('');
   const [showCabDetails,setShowCabDetails] = useState(false)
 
+  // Function fetches the info about the shortest time path and displays it to the user
   const handleSubmit = async (e) => {
     e.preventDefault();
 

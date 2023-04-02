@@ -3,9 +3,12 @@ import axios from 'axios'
 const ShowCab = ({shortest_time,source,destination,userId}) => {
     const [cabs,setCabs] = useState([])
     const [selected_cab,setSelectedCab] = useState({})
+
+    // call to server for showing the available cabs
     const showCabs=()=>{
         axios.get("http://localhost:3001/get-cabs").then((response)=>{setCabs(response.data)})
       }
+    // call to server for booking a cab
       const bookCab=()=>{
         alert("Do you want to continue ? ")
         axios.post("http://localhost:3001/book-cab",{
@@ -15,6 +18,8 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
          userId: userId
         }).then(()=>{console.log(userId)})
       }
+
+      // whenever a cab is booked it will change the status of the cab in showCabs using useEffect
       useEffect(() => {
         
         showCabs()
@@ -26,7 +31,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         setSelectedCab(cab);
       };
 
-    
+  //It will show the list of cabs and their details fetched from the database
   return (
     <div className="container">
         <table className="table table-bordered" style={{border:"2px solid black"}}>
@@ -60,7 +65,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         ))}
       </tbody>
     </table>
-    <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{selected_cab.price}</p>
+    <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{Math.round(selected_cab.price * shortest_time)}</p>
     <button className='btn btn-primary' onClick={bookCab}> Confirm Booking</button>
     </div>
   )
