@@ -30,15 +30,17 @@ Follow the steps:
 
 2. Once the above command is executed run the following command.
 
-  npm start
+    npm start
 
 this will start the react-app.
 
 3. Now go to server folder and run the command:
 
-node index.js
+   node index.js
 
 this will start your server.
 
 4. Go to the website and use it!
+
+5. To refresh the database to its initial values press ctrl+C to stop the server and the command node index.js again to run the server.
 
