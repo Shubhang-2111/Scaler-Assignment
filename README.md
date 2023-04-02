@@ -23,7 +23,7 @@ In this application user can enter email , source location , destination (i.e A,
 Based on the source and destination choosen and the shortest time , application will show the list of 5 cabs available with its name , price per minutes and the estimated cost based on the journey time.
 
 ## Selecting-Cab 
-User can tap on select button to choose a cab. Cab which already booked cannot be booked again as the selecting button will be disabled.
+User can tap on select button to choose a cab. Cab which is already booked cannot be booked again as the selecting button will be disabled.
 
 ## Confirm-Booking
 Once the user will click on confirm booking the cab will be booked by the user with estimated cost.
