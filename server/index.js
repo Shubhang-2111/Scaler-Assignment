@@ -10,6 +10,7 @@ const mysql = require('mysql')
 
 // for local host we can use mysql database  
 //create connection to the database
+
 // const db = mysql.createConnection({
 //   user: "root",
 //   host: 'localhost',
@@ -20,6 +21,7 @@ const mysql = require('mysql')
 // below is the connection to a sample online database running on freemysqldatabase 
 // NOTE if you use below database then booking time may vary  from your machine time
 // Please do not try to change the structure of database !
+
 const db = mysql.createConnection({
   user: "sql12610464",
   host: 'sql12.freesqldatabase.com',
@@ -79,6 +81,22 @@ app.get("/track-cab",(req,res)=>{
               res.send(result)
       })
   })
+
+  app.post("/change-price",(req,res)=>{
+    const cab_id = req.body.cab_id
+    const newPrice = req.body.newPrice
+db.query(
+    `UPDATE cabs SET price = ? WHERE cab_id = ?;`,
+    [newPrice,cab_id],
+    (err,result)=>{
+        if(err)
+        console.log(err)
+        else
+            res.send("Value Inserted")
+    })
+ 
+})
+
  
 // once the server starts all the values of database will be reset to inital values
 app.listen(3001, () => {

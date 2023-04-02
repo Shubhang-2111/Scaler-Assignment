@@ -4,6 +4,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
     const [cabs,setCabs] = useState([])
     const [selected_cab,setSelectedCab] = useState({})
     const [selected, setSelected] = useState(false)
+    const [newPrice,setNewPrice] = useState(null)
 
     // call to server for showing the available cabs
     const showCabs=()=>{
@@ -32,6 +33,16 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         setSelectedCab(cab);
         setSelected(true)
       };
+
+      const setPrice = () =>{
+         if(newPrice !== null && selected){
+          alert("Do you want to change the price ? ")
+        axios.post("http://localhost:3001/change-price",{
+         cab_id: selected_cab.cab_id,
+         newPrice: newPrice
+        }).then(()=>{console.log(userId)})
+         }
+      }
 
   //It will show the list of cabs and their details fetched from the database
   return (
@@ -67,7 +78,13 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         ))}
       </tbody>
     </table>
-    { selected ? <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{Math.round(selected_cab.price * shortest_time)} </p> : <p>No Cab Selected</p>}
+    { selected ? <p>Selected Cab is : {selected_cab.cab_name} with fare Rs.{Math.round(selected_cab.price * shortest_time)} 
+    <p>
+     Change the price for {selected_cab.cab_name}  
+     <input type="number" placeholder="new price" value={newPrice} onChange={(e)=>{setNewPrice(e.target.value)}} style={{width:"100px",margin:"2px"}}/> 
+     <button  onClick={setPrice}>Edit Price</button>
+    </p>
+    </p> : <p>No Cab Selected</p>}
     <button className='btn btn-primary' onClick={bookCab}> Confirm Booking</button>
     </div>
   )
