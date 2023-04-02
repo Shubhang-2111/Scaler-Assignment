@@ -7,6 +7,7 @@ app.use(cors())
 app.use(express.json())
 const mysql = require('mysql')
 
+//create connection to the database
 const db = mysql.createConnection({
   user: "root",
   host: 'localhost',
@@ -14,6 +15,7 @@ const db = mysql.createConnection({
   database: 'cab-booking',
 })
 
+// show the list of cabs from mysql databse
 app.get("/get-cabs",(req,res)=>{
   db.query(
       "SELECT * FROM cabs",
@@ -25,7 +27,7 @@ app.get("/get-cabs",(req,res)=>{
       })
   })
 
-
+// calculate shortest time/path between two node
   app.post('/shortest-path', (req, res) => {
     const node1 = req.body.node1;
     const node2 = req.body.node2;
@@ -36,7 +38,8 @@ app.get("/get-cabs",(req,res)=>{
     // Return the shortest path as a response
     res.json({ shortestPath });
   });
-  
+
+// mark a cab as booked on the request of the user
 app.post("/book-cab",(req,res)=>{
     const cab_id = req.body.cab_id
     const source = req.body.source
@@ -54,6 +57,7 @@ db.query(
  
 })
 
+//show the latest status of the cabs
 app.get("/track-cab",(req,res)=>{
   db.query("SELECT * FROM cabs",
       (err,result)=>{
@@ -64,6 +68,7 @@ app.get("/track-cab",(req,res)=>{
       })
   })
  
+// once the server starts all the values of database will be reset 
 app.listen(3001, () => {
   console.log('Server started on port 3001'),
   db.query(
