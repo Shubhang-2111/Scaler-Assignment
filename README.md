@@ -20,7 +20,7 @@ In this application user can enter email , source location , destination (i.e A,
 4. JavaScript
 
 ## Cab Details
-Based on the source and destination choosen and the shortest time , application will show the list of 5 cabs available with its name , price per minutes and the estimated cost based on the journey time.
+Once user will click on show details button then based on the source and destination choosen and the shortest time , application will show the list of 5 cabs available with its name , price per minutes and the estimated cost based on the journey time.
 
 ## Selecting-Cab 
 User can tap on select button to choose a cab. Cab which is already booked cannot be booked again as the selecting button will be disabled.
@@ -58,7 +58,7 @@ this will start your server.
 
 4. Go to the website and use it!
 
-5. To refresh the database to its initial values press ctrl+C to stop the server and the command node index.js again to run the server.
+5. To refresh the database to its initial values press ctrl+C to stop the server and then use command node index.js again to run the server.
 
 
 ## Screenshots
@@ -73,3 +73,5 @@ this will start your server.
 ### Database table 
 
 ![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(28).png?raw=true)
+
+
