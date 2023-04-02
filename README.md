@@ -54,3 +54,4 @@ this will start your server.
 ![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(27).png?raw=true)
 
 
+![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(28).png?raw=true)
