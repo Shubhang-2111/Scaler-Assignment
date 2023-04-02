@@ -44,3 +44,13 @@ this will start your server.
 
 5. To refresh the database to its initial values press ctrl+C to stop the server and the command node index.js again to run the server.
 
+
+## Screenshots
+
+![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(26).png?raw=true)
+
+
+
+![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(27).png?raw=true)
+
+
