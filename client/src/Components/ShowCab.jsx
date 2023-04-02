@@ -3,6 +3,7 @@ import axios from 'axios'
 const ShowCab = ({shortest_time,source,destination,userId}) => {
     const [cabs,setCabs] = useState([])
     const [selected_cab,setSelectedCab] = useState({})
+    const [selected, setSelected] = useState(false)
 
     // call to server for showing the available cabs
     const showCabs=()=>{
@@ -29,6 +30,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
     
       const handleCabSelect = (cab) => {
         setSelectedCab(cab);
+        setSelected(true)
       };
 
   //It will show the list of cabs and their details fetched from the database
@@ -65,7 +67,7 @@ const ShowCab = ({shortest_time,source,destination,userId}) => {
         ))}
       </tbody>
     </table>
-    <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{Math.round(selected_cab.price * shortest_time)}</p>
+    { selected ? <p>Selected Cab is : {selected_cab.cab_name} with price Rs.{Math.round(selected_cab.price * shortest_time)} </p> : <p>No Cab Selected</p>}
     <button className='btn btn-primary' onClick={bookCab}> Confirm Booking</button>
     </div>
   )
