@@ -5,7 +5,7 @@ import TrackCab from './TrackCab'
 
 const BookingInfo = () => {
 
-
+//Contains main element to be displayed on the main screen
   return (
    <div>
     <Navbar/>

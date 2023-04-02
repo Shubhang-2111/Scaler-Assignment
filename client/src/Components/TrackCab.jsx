@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 
+
 const TrackCab = () => {
     const[cabs,setCabs] = useState([])
     const trackCabs=()=>{
@@ -8,7 +9,7 @@ const TrackCab = () => {
       }
     
 
-
+//Show the current info of all the cabs , info will be updated everytime users presses the track button
   return ( 
     <div className="conatiner d-flex flex-column my-3" style={{height:"100vh"}}>
         <button className="btn btn-primary" onClick={trackCabs}> Track</button>
