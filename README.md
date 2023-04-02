@@ -1,7 +1,10 @@
 
 # Cab-Booking
 
-In this application user can enter email , source location , destination (i.e A,B,C,D,E,F). Based on the below time given in the assignment between every node. The application will show the shortest time that will be taken to reach the destination.
+In this application user can enter email , source location , destination (i.e A,B,C,D,E,F). Based on the below time between every node given in the assignment. The application will show the shortest time that will be taken to reach the destination.
+
+
+![App Screenshot](https://github.com/Shubhang-2111/Scaler-Assignment/blob/master/screenshots/Screenshot%20(29).png?raw=true)
 
 ## Tech Stack
 ### Frontend
